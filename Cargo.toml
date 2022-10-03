@@ -6,4 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-katex = "0.4.4"
+katex = { version = "0.4.4", default-features = false }
+
+[features]
+wasm = ["katex/wasm-js"]
+default = ["katex/quick-js"]
